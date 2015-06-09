@@ -65,6 +65,11 @@ class Httpd24 < Formula
       args << "--with-port=8080"
       args << "--with-sslport=8443"
     end
+    
+      args << "--enable-proxy"
+      args << "--enable-proxy-connect"
+      args << "--enable-proxy-http"
+      args << "--enable-rewrite"
 
     if build.with? "ldap"
       args << "--with-ldap"
